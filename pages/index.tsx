@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import NeshanMap from "react-neshan-map-leaflet";
 
 const Home: NextPage = () => {
   return (
@@ -25,22 +26,45 @@ const Home: NextPage = () => {
               <div className={styles.invitationContent}>
                 <div className={styles.invitationDate}>۲۲ مهر ۱۴۰۱</div>
                 <div className={styles.invitationTitle}>مراسم عروسی</div>
-                <div className={styles.invitationText}>بدین وسیله از شما دعوت میگردد با حضور خود در این جشن مراسم ما را زیباتر گردانید.</div>
-                <div className={styles.invitationText}>آیا مایل به حضور در مراسم هستید؟</div>
+                <div className={styles.invitationText}>
+                  بدین وسیله از شما دعوت میگردد با حضور خود در این جشن مراسم ما
+                  را زیباتر گردانید.
+                </div>
+                <div className={styles.invitationText}>
+                  آیا مایل به حضور در مراسم هستید؟
+                </div>
                 <div className={styles.buttonsContainer}>
-                  <button className={`${styles.buttonAccept} ${styles.button}`}>بله شرکت میکنم</button>
-                  <button className={`${styles.buttonReject} ${styles.button}`}>خیر شرکت نمیکنم</button>
+                  <button className={`${styles.buttonAccept} ${styles.button}`}>
+                    بله شرکت میکنم
+                  </button>
+                  <button className={`${styles.buttonReject} ${styles.button}`}>
+                    خیر شرکت نمیکنم
+                  </button>
                 </div>
                 <div className={styles.addressButtonContainer}>
-                  <a href="#address-slide" className={`${styles.button} ${styles.addressButton}`}>مکان برگذاری مراسم</a>
+                  <a
+                    href="#address-slide"
+                    className={`${styles.button} ${styles.addressButton}`}
+                  >
+                    مکان برگذاری مراسم
+                  </a>
                 </div>
               </div>
             </div>
           </div>
           <div className={styles.rsvpImage} />
         </div>
-        <div className={`${styles.slide} ${styles.addressSlide}`} id="address-slide">
-
+        <div
+          className={`${styles.slide} ${styles.addressSlide}`}
+          id="address-slide"
+        >
+          <NeshanMap
+            options={{
+              key: "web.64cc9e7cecda49a7b263a3d1c66e7e64",
+              center: [35.699739, 51.338097],
+              zoom: 13,
+            }}
+          />
         </div>
       </main>
     </div>
