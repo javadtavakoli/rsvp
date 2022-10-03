@@ -3,28 +3,111 @@
 }
 .slide {
   height: 100vh;
-  background-color: #fcfceb;
   position: relative;
   display: flex;
   align-items: center;
-
-  padding: 1em;
+  width: 70%;
+  margin: 0 auto;
+  height: 100vh;
 }
-.flower {
+.rsvp {
   flex: 2;
-  position: relative;
-  display: flex;
   height: 100%;
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.title {
-  flex: 4;
-  font-size: 10vmin;
-  padding: 0 5vw;
+.rsvpNames {
+  font-family: DahlingScriptSSi;
+  font-size: 4em;
   text-align: center;
-  color: #575757;
-  
+  margin-top: 1em;
+  justify-self: flex-start;
 }
-.redChar {
-  color: #f74b4b;
+.greenChar {
+  color: var(--green);
+}
+.rsvpImage {
+  background: url("/images/cake.jpg");
+  background-position: center;
+  background-size: cover;
+
+  height: 100%;
+  flex: 3;
+}
+.invitationBox {
+  display: flex;
+  margin-top: 5em;
+  align-items: center;
+}
+.hashtag {
+  transform: rotate(90deg);
+  font-weight: 700;
+  direction: ltr;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.invitationDate {
+  font-size: 1.5em;
+}
+.invitationTitle {
+  font-size: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-weight: 500;
+  color: var(--green);
+}
+.invitationText {
+  margin-top: 1em;
+  font-size: 1.3em;
+}
+.buttonsContainer {
+  margin-top: 1em;
+  display: flex;
+}
+.button {
+  flex: 1;
+  margin: 0 0.5em;
+  font-family: iransans;
+  border: none;
+  background-color: var(--black);
+  border: var(--black) 1px solid;
+
+  border-radius: 0;
+  color: white;
+  font-size: 1.1em;
+  padding: 0.5em;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+.buttonAccept {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+.button:hover {
+  background-color: white;
+  color: var(--black);
+}
+.buttonAccept:hover{
+  color: var(--green);
+
+}
+.addressButtonContainer{
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+}
+.addressButton {
+  background: white;
+  border: none;
+  color: var(--green);
+  margin-top: 2em;
+  text-align: center;
+}
+.addressButton:hover{
+  background: var(--green);
+  color: white;
+}
+.addressSlide{
+  background: var(--green);
 }

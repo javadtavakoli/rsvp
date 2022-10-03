@@ -14,9 +14,33 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <div className={styles.slide}>
-          <div className={styles.flower}><Image layout="fill" src="/flower.svg" /></div>
+          <div className={styles.rsvp}>
+            <div className={styles.rsvpNames}>
+              <span className={styles.greenChar}>B</span>ita&nbsp;
+              <span className={styles.greenChar}>&amp;</span>&nbsp;
+              <span className={styles.greenChar}>J</span>avad
+            </div>
+            <div className={styles.invitationBox}>
+              <div className={styles.hashtag}>#BandJWedding</div>
+              <div className={styles.invitationContent}>
+                <div className={styles.invitationDate}>۲۲ مهر ۱۴۰۱</div>
+                <div className={styles.invitationTitle}>مراسم عروسی</div>
+                <div className={styles.invitationText}>بدین وسیله از شما دعوت میگردد با حضور خود در این جشن مراسم ما را زیباتر گردانید.</div>
+                <div className={styles.invitationText}>آیا مایل به حضور در مراسم هستید؟</div>
+                <div className={styles.buttonsContainer}>
+                  <button className={`${styles.buttonAccept} ${styles.button}`}>بله شرکت میکنم</button>
+                  <button className={`${styles.buttonReject} ${styles.button}`}>خیر شرکت نمیکنم</button>
+                </div>
+                <div className={styles.addressButtonContainer}>
+                  <a href="#address-slide" className={`${styles.button} ${styles.addressButton}`}>مکان برگذاری مراسم</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={styles.rsvpImage} />
+        </div>
+        <div className={`${styles.slide} ${styles.addressSlide}`} id="address-slide">
 
-          <div className={styles.title}> <span className={styles.redChar}>B</span>ita <br/> and<br/> <span className={styles.redChar}>J</span>avad's<br/> Wedding</div>
         </div>
       </main>
     </div>
