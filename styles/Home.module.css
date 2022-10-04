@@ -6,7 +6,7 @@
   position: relative;
   display: flex;
   align-items: center;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   height: 100vh;
 }
@@ -88,11 +88,10 @@
   background-color: white;
   color: var(--black);
 }
-.buttonAccept:hover{
+.buttonAccept:hover {
   color: var(--green);
-
 }
-.addressButtonContainer{
+.addressButtonContainer {
   display: flex;
   margin-top: 2em;
   justify-content: center;
@@ -104,10 +103,80 @@
   margin-top: 2em;
   text-align: center;
 }
-.addressButton:hover{
+.addressButton:hover {
   background: var(--green);
   color: white;
 }
-.addressSlide{
-  background: var(--black);
+.addressSlide {
+  background: var(--green);
+  color: white;
+  padding: 1em;
+  flex-direction: column;
+}
+.slideTitle {
+  text-align: center;
+  align-self: center;
+}
+.address {
+  margin: 1em 0;
+  text-align: center;
+  font-size: 1.2em;
+}
+.addressTitle{
+  font-weight: 500;
+}
+.locationIcon {
+  width: 1em;
+  height: 1em;
+  background-image: url("/icons/location.svg");
+  background-size: contain;
+  filter: invert(1);
+  margin-left: 0.2em;
+}
+.mapContainer {
+  width: 100%;
+  height: 40vh;
+}
+.navigation{
+  background: white;
+  border-radius: 5px;
+  margin-top: 1em;
+  color: var(--black);
+  text-align: center;
+  padding: 1em;
+
+}
+.navigationTitle {
+  font-size: 2em;
+}
+
+.navigationLinks{
+  padding: 1em;
+
+}
+.navigationLinks a{
+  margin: 1em;
+}
+.navigationLinks img {
+  height: 7em;
+}
+@media (max-width: 1440px) {
+  .slide {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1024px) {
+  .slide {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .slide {
+    width: 95%;
+    font-size: 10px;
+    flex-direction: column;
+  }
+  .rsvpImage {
+    width: 100%;
+  }
 }

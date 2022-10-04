@@ -1,8 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import { MapContainer, Marker } from "react-leaflet";
 import styles from "../styles/Home.module.css";
-import NeshanMap from "react-neshan-map-leaflet";
+import dynamic from "next/dynamic";
+import "leaflet/dist/leaflet.css";
+const LocationMap = dynamic(() => import("../components/Map"), { ssr: false });
 
 const Home: NextPage = () => {
   return (
@@ -46,7 +50,7 @@ const Home: NextPage = () => {
                     href="#address-slide"
                     className={`${styles.button} ${styles.addressButton}`}
                   >
-                    مکان برگذاری مراسم
+                    مکان برگزاری مراسم
                   </a>
                 </div>
               </div>
@@ -58,13 +62,30 @@ const Home: NextPage = () => {
           className={`${styles.slide} ${styles.addressSlide}`}
           id="address-slide"
         >
-          <NeshanMap
-            options={{
-              key: "web.64cc9e7cecda49a7b263a3d1c66e7e64",
-              center: [35.699739, 51.338097],
-              zoom: 13,
-            }}
-          />
+          <h1 className={styles.slideTitle}>مکان برگزاری مراسم</h1>
+          <div className={styles.address}>
+            <span className={styles.addressTitle}>آدرس:</span> سیرجان - جاده
+            تهران - کاظم آباد - به سمت امامزاده محمد - پیچ سوم - کوچه عطار - باغ
+            افلاطونی
+          </div>
+          <div className={styles.mapContainer}>
+            <LocationMap />
+          </div>
+
+          <div className={styles.navigation}>
+            <div className={styles.navigationTitle}>مسیریابی</div>
+            <div>
+              محل برگزاری با کلیک بر روی نرم افزار مورد نظر مسیریابی میگردد
+            </div>
+            <div className={styles.navigationLinks}>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=29.565774%2C55.545162">
+                <img src="/icons/google-map.png" />
+              </a>
+              <a href="https://nshn.ir/sbgFf-yjgNWF">
+                <img src="/icons/neshan.webp" />
+              </a>
+            </div>
+          </div>
         </div>
       </main>
     </div>
