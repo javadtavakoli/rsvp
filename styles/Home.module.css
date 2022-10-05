@@ -11,7 +11,7 @@
   height: 100vh;
 }
 .rsvp {
-  flex: 2;
+  flex: 3;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
   font-family: DahlingScriptSSi;
   font-size: 4em;
   text-align: center;
-  margin-top: 1em;
+  margin-top: 0.5em;
   justify-self: flex-start;
 }
 .greenChar {
@@ -33,12 +33,13 @@
   background-size: cover;
 
   height: 100%;
-  flex: 3;
+  flex: 4;
 }
 .invitationBox {
   display: flex;
-  margin-top: 5em;
+  margin-top: 3em;
   align-items: center;
+  padding: 0 0.5em;
 }
 .hashtag {
   transform: rotate(90deg);
@@ -60,6 +61,10 @@
 .invitationText {
   margin-top: 1em;
   font-size: 1.3em;
+  text-align: justify;
+}
+.invitedName {
+  font-weight: 500;
 }
 .buttonsContainer {
   margin-top: 1em;
@@ -122,7 +127,7 @@
   text-align: center;
   font-size: 1.2em;
 }
-.addressTitle{
+.addressTitle {
   font-weight: 500;
 }
 .locationIcon {
@@ -137,24 +142,22 @@
   width: 100%;
   height: 40vh;
 }
-.navigation{
+.navigation {
   background: white;
   border-radius: 5px;
   margin-top: 1em;
   color: var(--black);
   text-align: center;
   padding: 1em;
-
 }
 .navigationTitle {
   font-size: 2em;
 }
 
-.navigationLinks{
+.navigationLinks {
   padding: 1em;
-
 }
-.navigationLinks a{
+.navigationLinks a {
   margin: 1em;
 }
 .navigationLinks img {
